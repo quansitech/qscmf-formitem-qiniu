@@ -1,0 +1,31 @@
+{
+  "name": "quansitech/qscmf-formitem-qiniu",
+  "description": "qscmf formbuilder item",
+  "type": "library",
+  "keywords": ["thinkphp", "admin", "component", "formbuilder", "qscmf", "qiniu"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "tiderjian",
+      "email": "tider_yatsen@hotmail.com"
+    }
+  ],
+  "require": {
+      "php": ">=7.2.0",
+      "tiderjian/think-core": "dev-dev",
+      "qiniu/php-sdk": "^7.2",
+      "guzzlehttp/guzzle": "^6.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "FormItem\\Qiniu\\": "src/"
+    }
+  },
+  "extra": {
+    "qscmf": {
+      "providers": [
+        "FormItem\\Qiniu\\QiniuProvider"
+      ]
+    }
+  }
+}
