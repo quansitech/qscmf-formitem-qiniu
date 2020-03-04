@@ -2,7 +2,7 @@
     <div class="form-group item_{$form.name} {$form.extra_class}">
         <label class="left control-label">{$form.title}：</label>
         <div class="right">
-            <div id="{$form.name}" class="mainContainer"  <notempty name="form.options.multiple">multiple</notempty> <empty name='form.options.type'>data-url="{:U('qscmf/qiniu/upToken', ['type' => 'video'])}"<else/>data-url="{:U('qscmf/qiniu/upToken', ['type' => $form['options']['type']])}"</empty> data-checktranscode="{:U('qscmf/qiniu/checkTranscode')}" data-field="{$form.name}" data-loading="__PUBLIC__/libs/qiniu/loading.gif">
+            <div id="{$form.name}" class="mainContainer"  <notempty name="form.options.multiple">multiple</notempty> <empty name='form.options.type'>data-url="{:U('extends/qiniu/upToken', ['type' => 'video'])}"<else/>data-url="{:U('extends/qiniu/upToken', ['type' => $form['options']['type']])}"</empty> data-checktranscode="{:U('extends/qiniu/checkTranscode')}" data-field="{$form.name}" data-loading="__PUBLIC__/libs/qiniu/loading.gif">
                 <php>
                     $type = $form['options']['type'] ?? 'video';
                     $config = C('UPLOAD_TYPE_' . strtoupper($type));

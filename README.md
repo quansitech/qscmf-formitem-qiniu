@@ -11,7 +11,7 @@ composer require quansitech/qscmf-formitem-qiniu
 ```php
 $options = [
     'multiple' => true, //是否开启多文件上传 默认关闭
-    'url' => U('api/qiniu/upToken', ['type' => 'bigaudio']), //重置uptoken的获取地址，或者修改类型设置 type都可以直接修改url属性   默认地址为 U('api/qiniu/upToken', ['type' => 'audio'])
+    'type' => 'bigaudio', //重置upload_type,qiniu_audio 的默认值为audio, qiniu_video的默认值为video
 ];
 //如没有特别需求，$options可不传
 addFormItem('audio_id', 'qiniu_audio', '音频文件', '', $options)
