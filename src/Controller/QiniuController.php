@@ -128,10 +128,10 @@ class QiniuController extends Controller{
 
         $pfopOps = $config['pfopOps'];
         $policy = array(
-            'callbackUrl' => U('qscmf/Qiniu/callback', '',true,SITE_URL),
+            'callbackUrl' => U('extends/Qiniu/callback', '',true,SITE_URL),
             'callbackBody' =>$callbackBody,
             'persistentOps' => $pfopOps,
-            'persistentNotifyUrl' => U('qscmf/Qiniu/notify', '', true, SITE_URL),
+            'persistentNotifyUrl' => U('extends/Qiniu/notify', '', true, SITE_URL),
             'persistentPipeline' => $config['pipeline'],
             'mimeLimit' => str_replace(',', ';', $config['mimes']),
             'fsizeLimit' => $config['maxSize']
