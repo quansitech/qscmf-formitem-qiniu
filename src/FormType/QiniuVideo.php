@@ -6,7 +6,7 @@ use Think\View;
 
 class QiniuVideo implements FormType{
 
-    public function build($form_type){
+    public function build(array $form_type){
         $view = new View();
         $view->assign('form', $form_type);
         $content = $view->fetch(__DIR__ . '/qiniu_video.html');
